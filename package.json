@@ -1,5 +1,5 @@
 {
-  "name": "spendle-lambda-sms",
+  "name": "spendle-lambda",
   "version": "1.0.0",
   "description": "A lambda that periodically texts users to update them on their budget progress",
   "main": "index.js",
