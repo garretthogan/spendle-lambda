@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A lambda that periodically texts users to update them on their budget progress",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garretthogan/spendle-lambda.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:lambda": "claudia test-lambda --policies policies --profile claudia-dynamo",
