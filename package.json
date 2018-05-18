@@ -9,9 +9,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:lambda": "claudia test-lambda --policies policies --profile claudia-dynamo",
-    "create": "claudia create --policies policies --region us-east-1 --handler index.handler --profile claudia-dynamo --set-env-from-json .env.json --configure-db",
-    "update": "claudia update --policies policies --profile claudia-dynamo"
+    "test:lambda": "claudia test-lambda --policies policies --profile claudia",
+    "create": "claudia create --policies policies --region us-east-1 --handler index.handler --profile claudia --set-env-from-json .env.json --configure-db",
+    "update": "claudia update --policies policies --profile claudia"
   },
   "author": "Garrett Hogan",
   "license": "ISC",

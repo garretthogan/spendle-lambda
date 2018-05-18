@@ -9,9 +9,8 @@ exports.handler = function (event, context) {
   const todaysDate = moment().date();
   const daysInMonth = moment().daysInMonth();
   const daysRemaining = (daysInMonth - todaysDate);
-  
+
   const client = new twilio(SID, TOKEN);
-  const toNumber = 12253374350;
 
   const searchParams = {
     TableName: 'spendle-user-data',
@@ -21,6 +20,7 @@ exports.handler = function (event, context) {
   };
 
   dynamoDB.get(searchParams).promise().then(res => {
+    const toNumber = res.Item.phoneNumber;
     const spentThisMonth = res.Item.spentThisMonth;
     const target = res.Item.targetSavingsPercentage;
     const income = res.Item.incomeAfterBills;
