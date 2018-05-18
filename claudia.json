@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "spendle-lambda-sms-executor",
+    "name": "spendle-lambda-sms",
+    "region": "us-east-1"
+  }
+}
