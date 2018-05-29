@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:lambda": "claudia test-lambda --policies policies --profile claudia",
     "create": "claudia create --policies policies --region us-east-1 --handler index.handler --profile claudia --set-env-from-json .env.json --configure-db",
-    "update": "claudia update --policies policies --profile claudia"
+    "update": "claudia update --policies policies --profile claudia",
+    "schedule-update": "claudia add-scheduled-event --event cronEvent.json --name BudgetUpdate --schedule \"cron(30 9 * * ? *)\" --profile claudia"
   },
   "author": "Garrett Hogan",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "aws-sdk": "^2.242.1",
     "claudia": "^4.0.0",
     "moment": "^2.22.1",
+    "node-fetch": "^2.1.2",
     "twilio": "^3.17.0"
   }
 }
