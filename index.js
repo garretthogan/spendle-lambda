@@ -74,7 +74,7 @@ exports.handler = function (event, context) {
         // text the user their report
         messages.push(client.messages.create({
           body: `
-          Hey! Looks like you spent about $${report.totalSpent.toFixed(2)} this month. You spent $${report.spentLastWeek.toFixed(2)} last week and $${report.spentYesterday.toFixed(2)} yesterday. ${getBudgetText(report.dailyBudget, report.remainingBudget, report.targetSavings)}
+          Hey! Looks like you spent about $${report.totalSpent.toFixed(2)} this month. You spent $${report.spentYesterday.toFixed(2)} yesterday. ${getBudgetText(report.dailyBudget, report.remainingBudget, report.targetSavings)}
           `,
           to: `+${toNumber}`,
           from: '+12252636117'
